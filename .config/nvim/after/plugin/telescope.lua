@@ -12,7 +12,7 @@ telescope.setup({
             show_all_buffers = true,
             sort_lastused = true,
             previewer = true,
-            initial_mode = "normal",
+            initial_mode = "insert",
             mappings = {
                 n = {
                   ["d"] = "delete_buffer",
