@@ -123,3 +123,8 @@ export PATH="$PATH:~/.local/bin"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 PATH=/opt/toolchains/riscv/bin/:/home/abhgarg/bin:/home/abhgarg/bin:/home/abhgarg/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/nvim-linux-x86_64/bin:~/.local/bin:/home/abhgarg/.fzf/bin
 alias copy='xclip -sel clip'
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
