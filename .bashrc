@@ -128,3 +128,34 @@ alias copy='xclip -sel clip'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Define shorthand directory mappings
+declare -A GO_PATHS=(
+    [ooo]="~/college_work/fa25_ece411_Fiendish4_D-Flip_Flops/mp_ooo"
+    [mp3d]="~/college_work/mp3-fa25"
+)
+
+# Define the go command
+go() {
+    local key="$1"
+    if [[ -z "$key" ]]; then
+        echo "Usage: go <shortcut>"
+        echo "Available shortcuts:"
+        for k in "${!GO_PATHS[@]}"; do
+            echo "  $k → ${GO_PATHS[$k]}"
+        done
+        return 1
+    fi
+
+    local dest="${GO_PATHS[$key]}"
+    if [[ -z "$dest" ]]; then
+        echo "go: unknown shortcut '$key'"
+        return 1
+    fi
+
+    cd "$(eval echo "$dest")" || {
+        echo "go: failed to cd into $dest"
+        return 1
+    }
+}
+

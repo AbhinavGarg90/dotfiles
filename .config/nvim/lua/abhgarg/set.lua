@@ -18,7 +18,7 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.scrolloff = 41
+vim.opt.scrolloff = math.floor(vim.o.lines / 2)
 
 
 -- Relative line numbers in file tree

@@ -12,14 +12,23 @@ lsp_zero.on_attach(function(_, bufnr)
   -- vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.code_action() end, opts) -- Used by Harpoon
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set({"x", "n"}, "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  -- vim.keymap.set({"x", "n"}, "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+  vim.diagnostic.config({
+      virtual_text = true,  -- disables inline virtual text diagnostics
+      virtual_lines = false,  -- disables inline virtual text diagnostics
+      signs = true,          -- keep signs in the sign column
+      underline = true,      -- underline problematic code
+      update_in_insert = false,
+      severity_sort = true,
+  })
 end)
+
 
 -- to learn how to use mason.nvim with lsp-zero
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'rust_analyzer'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()

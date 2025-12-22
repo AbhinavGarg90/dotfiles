@@ -1,10 +1,14 @@
 vim.cmd [[packadd packer.nvim]]
+require('packer').init({
+  git = {
+    clone_timeout = 600,  -- 600 seconds = 10 minutes
+  },
+})
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.6',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim', 
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use({
@@ -14,7 +18,7 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 
@@ -58,5 +62,6 @@ return require('packer').startup(function(use)
     }
     use('ggandor/leap.nvim')
     use('ThePrimeagen/harpoon')
+    use('github/copilot.vim')
 end)
 
