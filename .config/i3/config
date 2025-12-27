@@ -31,7 +31,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-# exec --no-startup-id picom
+exec_always --no-startup-id picom --config ~/.config/picom.conf
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_poly.sh
 exec_always feh --bg-fill ~/Pictures/zelda-bg2.png
@@ -225,3 +225,6 @@ exec --no-startup-id /usr/lib/gsd-xsettings
 
 # Screenshots
 bindsym Ctrl+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
+
+# gaps
+gaps inner 10

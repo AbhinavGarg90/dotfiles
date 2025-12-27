@@ -85,7 +85,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["auto-session"] = {
-    config = { "\27LJ\2\n∞\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\2\14log_level\nerror\31auto_session_suppress_dirs\0\nsetup\17auto-session\frequire\0" },
+    config = { "\27LJ\2\n∞\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\2\31auto_session_suppress_dirs\0\14log_level\nerror\nsetup\17auto-session\frequire\0" },
     loaded = true,
     path = "/home/ag90/.local/share/nvim/site/pack/packer/start/auto-session",
     url = "https://github.com/rmagatti/auto-session"
@@ -191,7 +191,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
+    config = { "\27LJ\2\nä\5\0\0\3\0\b\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\5\0'\2\a\0B\0\2\1K\0\1\0÷\3                highlight Normal guibg=NONE ctermbg=NONE\n                highlight NormalNC guibg=NONE ctermbg=NONE\n                highlight EndOfBuffer guibg=NONE ctermbg=NONE\n                highlight SignColumn guibg=NONE ctermbg=NONE\n                highlight LineNr guibg=NONE ctermbg=NONE\n                highlight CursorLineNr guibg=NONE ctermbg=NONE\n                highlight NormalFloat guibg=NONE\n                highlight FloatBorder guibg=NONE\n        \26colorscheme rose-pine\bcmd\bvim\1\0\3\23disable_background\2\fvariant\tmoon\29disable_float_background\2\nsetup\14rose-pine\frequire\0" },
     loaded = true,
     path = "/home/ag90/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
@@ -231,11 +231,11 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: auto-session
 time([[Config for auto-session]], true)
-try_loadstring("\27LJ\2\n∞\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\2\14log_level\nerror\31auto_session_suppress_dirs\0\nsetup\17auto-session\frequire\0", "config", "auto-session")
+try_loadstring("\27LJ\2\n∞\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\5\0\0\a~/\15~/Projects\16~/Downloads\6/\1\0\2\31auto_session_suppress_dirs\0\14log_level\nerror\nsetup\17auto-session\frequire\0", "config", "auto-session")
 time([[Config for auto-session]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
+try_loadstring("\27LJ\2\nä\5\0\0\3\0\b\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\5\0'\2\a\0B\0\2\1K\0\1\0÷\3                highlight Normal guibg=NONE ctermbg=NONE\n                highlight NormalNC guibg=NONE ctermbg=NONE\n                highlight EndOfBuffer guibg=NONE ctermbg=NONE\n                highlight SignColumn guibg=NONE ctermbg=NONE\n                highlight LineNr guibg=NONE ctermbg=NONE\n                highlight CursorLineNr guibg=NONE ctermbg=NONE\n                highlight NormalFloat guibg=NONE\n                highlight FloatBorder guibg=NONE\n        \26colorscheme rose-pine\bcmd\bvim\1\0\3\23disable_background\2\fvariant\tmoon\29disable_float_background\2\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false

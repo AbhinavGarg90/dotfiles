@@ -11,13 +11,32 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', 
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	})
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+        require('rose-pine').setup({
+                variant = 'moon', -- main | moon | dawn
+                disable_background = true,
+                disable_float_background = true,
+                })
+
+        vim.cmd('colorscheme rose-pine')
+
+        -- Force transparency (important)
+        vim.cmd([[
+                highlight Normal guibg=NONE ctermbg=NONE
+                highlight NormalNC guibg=NONE ctermbg=NONE
+                highlight EndOfBuffer guibg=NONE ctermbg=NONE
+                highlight SignColumn guibg=NONE ctermbg=NONE
+                highlight LineNr guibg=NONE ctermbg=NONE
+                highlight CursorLineNr guibg=NONE ctermbg=NONE
+                highlight NormalFloat guibg=NONE
+                highlight FloatBorder guibg=NONE
+        ]])
+        end
+    })
+
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')

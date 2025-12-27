@@ -122,7 +122,7 @@ export PATH="$PATH:~/.local/bin"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias copy='xclip -sel clip'
-. "$HOME/.cargo/env"
+. "$HOME/.cargo/env" 2>/dev/null
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
