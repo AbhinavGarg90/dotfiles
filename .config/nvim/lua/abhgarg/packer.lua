@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
         as = 'rose-pine',
         config = function()
         require('rose-pine').setup({
-                variant = 'moon', -- main | moon | dawn
+                variant = 'main', -- main | moon | dawn
                 disable_background = true,
                 disable_float_background = true,
                 })

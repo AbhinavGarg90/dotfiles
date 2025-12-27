@@ -224,7 +224,7 @@ for_window [class="^.*"] border pixel 0
 exec --no-startup-id /usr/lib/gsd-xsettings
 
 # Screenshots
-bindsym Ctrl+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
+bindsym Ctrl+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select -o > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
 
 # gaps
 gaps inner 10
