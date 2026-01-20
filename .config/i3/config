@@ -56,6 +56,8 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+z exec flatpak run app.zen_browser.zen
+
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -228,3 +230,10 @@ bindsym Ctrl+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --
 
 # gaps
 gaps inner 10
+
+# Keyboard backlight brightness
+bindsym XF86KbdBrightnessUp exec --no-startup-id asusctl -n
+bindsym XF86KbdBrightnessDown exec --no-startup-id asusctl -p
+
+# Fan / performance profile toggle
+bindsym XF86Launch4 exec --no-startup-id ~/.config/i3/bin/asus-profile-cycle
