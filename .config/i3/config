@@ -20,14 +20,15 @@ font pango:monospace 14
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex --autostart --environment i3
+# exec --no-startup-id dex --autostart --environment i3
+bindsym $mod+Shift+y exec --no-startup-id i3lock -c 000000
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -138,7 +139,8 @@ set $m1 eDP-1
 set $m2 HDMI-1
 
 # Monitor setup (safe defaults)
-exec_always --no-startup-id sh -c 'xrandr | grep -q "^HDMI-1 connected" && xrandr --output HDMI-1 --primary --auto --right-of eDP-1'
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1200
+exec_always --no-startup-id ~/.config/i3/bin/manage-monitor
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -237,3 +239,11 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id asusctl -p
 
 # Fan / performance profile toggle
 bindsym XF86Launch4 exec --no-startup-id ~/.config/i3/bin/asus-profile-cycle
+
+# Battery noti
+exec --no-startup-id ~/.config/i3/bin/battery-alert
+
+# in case windows key stops working
+bindsym Control+Shift+Return exec alacritty
+bindsym Control+space exec rofi -show drun
+bindsym Control+Shift+Escape exec i3-msg restart

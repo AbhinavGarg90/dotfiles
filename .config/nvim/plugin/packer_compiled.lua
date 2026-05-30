@@ -143,7 +143,7 @@ _G.packer_plugins = {
   ["leap.nvim"] = {
     loaded = true,
     path = "/home/ag90/.local/share/nvim/site/pack/packer/start/leap.nvim",
-    url = "https://github.com/ggandor/leap.nvim"
+    url = "https://codeberg.org/andyg/leap.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -205,7 +205,7 @@ _G.packer_plugins = {
     url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
   },
   ["rose-pine"] = {
-    config = { "\27LJ\2\nä\5\0\0\3\0\b\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\5\0'\2\a\0B\0\2\1K\0\1\0÷\3                highlight Normal guibg=NONE ctermbg=NONE\n                highlight NormalNC guibg=NONE ctermbg=NONE\n                highlight EndOfBuffer guibg=NONE ctermbg=NONE\n                highlight SignColumn guibg=NONE ctermbg=NONE\n                highlight LineNr guibg=NONE ctermbg=NONE\n                highlight CursorLineNr guibg=NONE ctermbg=NONE\n                highlight NormalFloat guibg=NONE\n                highlight FloatBorder guibg=NONE\n        \26colorscheme rose-pine\bcmd\bvim\1\0\3\23disable_background\2\fvariant\tmain\29disable_float_background\2\nsetup\14rose-pine\frequire\0" },
+    config = { "\27LJ\2\nä\5\0\0\3\0\b\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\5\0'\2\a\0B\0\2\1K\0\1\0÷\3                highlight Normal guibg=NONE ctermbg=NONE\n                highlight NormalNC guibg=NONE ctermbg=NONE\n                highlight EndOfBuffer guibg=NONE ctermbg=NONE\n                highlight SignColumn guibg=NONE ctermbg=NONE\n                highlight LineNr guibg=NONE ctermbg=NONE\n                highlight CursorLineNr guibg=NONE ctermbg=NONE\n                highlight NormalFloat guibg=NONE\n                highlight FloatBorder guibg=NONE\n        \26colorscheme rose-pine\bcmd\bvim\1\0\3\29disable_float_background\2\23disable_background\2\fvariant\tmain\nsetup\14rose-pine\frequire\0" },
     loaded = true,
     path = "/home/ag90/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
@@ -219,11 +219,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ag90/.local/share/nvim/site/pack/packer/start/term-edit.nvim",
     url = "https://github.com/chomosuke/term-edit.nvim"
-  },
-  ["toggle-lsp-diagnostics.nvim"] = {
-    loaded = true,
-    path = "/home/ag90/.local/share/nvim/site/pack/packer/start/toggle-lsp-diagnostics.nvim",
-    url = "https://github.com/WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"
   },
   undotree = {
     loaded = true,
@@ -245,7 +240,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\nä\5\0\0\3\0\b\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\5\0'\2\a\0B\0\2\1K\0\1\0÷\3                highlight Normal guibg=NONE ctermbg=NONE\n                highlight NormalNC guibg=NONE ctermbg=NONE\n                highlight EndOfBuffer guibg=NONE ctermbg=NONE\n                highlight SignColumn guibg=NONE ctermbg=NONE\n                highlight LineNr guibg=NONE ctermbg=NONE\n                highlight CursorLineNr guibg=NONE ctermbg=NONE\n                highlight NormalFloat guibg=NONE\n                highlight FloatBorder guibg=NONE\n        \26colorscheme rose-pine\bcmd\bvim\1\0\3\23disable_background\2\fvariant\tmain\29disable_float_background\2\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
+try_loadstring("\27LJ\2\nä\5\0\0\3\0\b\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\0016\0\4\0009\0\5\0'\2\a\0B\0\2\1K\0\1\0÷\3                highlight Normal guibg=NONE ctermbg=NONE\n                highlight NormalNC guibg=NONE ctermbg=NONE\n                highlight EndOfBuffer guibg=NONE ctermbg=NONE\n                highlight SignColumn guibg=NONE ctermbg=NONE\n                highlight LineNr guibg=NONE ctermbg=NONE\n                highlight CursorLineNr guibg=NONE ctermbg=NONE\n                highlight NormalFloat guibg=NONE\n                highlight FloatBorder guibg=NONE\n        \26colorscheme rose-pine\bcmd\bvim\1\0\3\29disable_float_background\2\23disable_background\2\fvariant\tmain\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
 -- Config for: auto-session
 time([[Config for auto-session]], true)

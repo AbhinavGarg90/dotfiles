@@ -65,7 +65,6 @@ return require('packer').startup(function(use)
     use('m4xshen/autoclose.nvim')
     use('vim-airline/vim-airline')
     use('numToStr/Comment.nvim')
-    use('WhoIsSethDaniel/toggle-lsp-diagnostics.nvim')
     use('nvim-treesitter/nvim-treesitter-context')
     use('chomosuke/term-edit.nvim')
     -- use('airblade/vim-gitgutter')
@@ -79,7 +78,7 @@ return require('packer').startup(function(use)
             }
         end
     }
-    use('ggandor/leap.nvim')
+    use('https://codeberg.org/andyg/leap.nvim')
     use('ThePrimeagen/harpoon')
     use('github/copilot.vim')
     use({

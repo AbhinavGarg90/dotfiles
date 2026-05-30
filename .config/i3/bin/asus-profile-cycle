@@ -1,21 +1,3 @@
 #!/bin/sh
 
-CUR=$(asusctl profile -p 2>/dev/null \
-  | sed -n 's/^Active profile is //p' \
-  | tr '[:upper:]' '[:lower:]')
-
-case "$CUR" in
-  quiet)
-    asusctl profile -P balanced
-    ;;
-  balanced)
-    asusctl profile -P performance
-    ;;
-  performance)
-    asusctl profile -P quiet
-    ;;
-  *)
-    asusctl profile -P balanced
-    ;;
-esac
-
+asusctl profile next

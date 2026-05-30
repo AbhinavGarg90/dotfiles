@@ -1,10 +1,8 @@
 #!/bin/sh
 
-OUT=$(asusctl profile -p 2>/dev/null)
-
-ACTIVE=$(echo "$OUT" | sed -n 's/^Active profile is //p' | tr '[:upper:]' '[:lower:]')
-AC=$(echo "$OUT" | sed -n 's/^Profile on AC is //p' | tr '[:upper:]' '[:lower:]')
-BAT=$(echo "$OUT" | sed -n 's/^Profile on Battery is //p' | tr '[:upper:]' '[:lower:]')
+ACTIVE=$(asusctl profile get 2>/dev/null \
+  | sed -n 's/^Active profile: //p' \
+  | tr '[:upper:]' '[:lower:]')
 
 case "$ACTIVE" in
   quiet)
@@ -20,4 +18,3 @@ case "$ACTIVE" in
     echo "󰍛 N/A"
     ;;
 esac
-
